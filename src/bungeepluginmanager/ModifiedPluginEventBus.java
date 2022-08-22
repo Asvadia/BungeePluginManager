@@ -28,14 +28,4 @@ public class ModifiedPluginEventBus extends EventBus {
 		}
 	}
 
-	@Override
-	public void post(Object event) {
-		if (event instanceof AsyncEvent) {
-			synchronized (uncompletedEvents) {
-				uncompletedEvents.add((AsyncEvent<?>) event);
-			}
-		}
-		super.post(event);
-	}
-
 }

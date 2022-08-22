@@ -11,7 +11,6 @@ group 'bungeepluginmanager'
 version '2.1'
 sourceCompatibility = JavaVersion.VERSION_1_8
 
-
 File targetJarDirectory = new File("target")
 
 
@@ -34,6 +33,7 @@ sourceSets {
 
 repositories {
 	mavenCentral()
+	mavenLocal()
 	maven {
 		url 'https://oss.sonatype.org/content/repositories/snapshots'
 	}
@@ -41,7 +41,7 @@ repositories {
 
 
 dependencies {
-	compileOnly group: 'net.md-5', name: 'bungeecord-api', version: '1.15-SNAPSHOT'
+	compileOnly group: 'fr.azirixx.mc', name: 'bungeecord', version: 'waterfall'
 	compileOnly group: 'org.yaml', name: 'snakeyaml', version: '1.26'
 }
 
